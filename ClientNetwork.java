@@ -9,10 +9,19 @@ public class ClientNetwork {
     private Socket socket;
     private BufferedReader in;
     private PrintWriter out;
+    private String ip;
+    private int port;
     private boolean connected = false;
 
-    //  prend l'IP et le port en paramètre
-    public void connect(String ip, int port) throws IOException {
+    public ClientNetwork(String ip, int port) {
+        this.ip = ip;
+        this.port = port;
+    }
+
+    /**
+     * Se connecte au serveur
+     */
+    public void connect() throws IOException {
         socket = new Socket(ip, port);
         in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         out = new PrintWriter(socket.getOutputStream(), true);
