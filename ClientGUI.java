@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 /**
  * Interface graphique côté CLIENT (Swing).
  *
- * Fonctionnalités (conformes au sujet) :
+ * Fonctionnalités :
  *  - Champ IP + port pour se connecter au serveur
  *  - Champ de saisie des commandes
  *  - Bouton "Envoyer"

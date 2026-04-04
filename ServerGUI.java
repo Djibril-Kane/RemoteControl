@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
 /**
  * Interface graphique côté SERVEUR (Swing).
  *
- * Fonctionnalités (conformes au sujet) :
+ * Fonctionnalités :
  *  - Bouton Démarrer / Arrêter le serveur
  *  - Tableau des clients connectés avec leur adresse IP
  *  - Journal des commandes reçues et exécutées
