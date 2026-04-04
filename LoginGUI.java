@@ -48,7 +48,7 @@ public class LoginGUI extends JFrame {
         JPanel userPanel = new JPanel(new BorderLayout(10, 0));
         userPanel.add(new JLabel("Utilisateur :"), BorderLayout.WEST);
         txtUsername = new JTextField(15);
-        txtUsername.setText("admin");
+        txtUsername.setText("");
         userPanel.add(txtUsername, BorderLayout.CENTER);
         centerPanel.add(userPanel);
         centerPanel.add(Box.createVerticalStrut(10));
@@ -57,7 +57,7 @@ public class LoginGUI extends JFrame {
         JPanel passPanel = new JPanel(new BorderLayout(10, 0));
         passPanel.add(new JLabel("Mot de passe :"), BorderLayout.WEST);
         txtPassword = new JPasswordField(15);
-        txtPassword.setText("1234");
+        txtPassword.setText("");
         passPanel.add(txtPassword, BorderLayout.CENTER);
         centerPanel.add(passPanel);
         centerPanel.add(Box.createVerticalStrut(15));
