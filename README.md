@@ -8,8 +8,8 @@ Logiciel de contrôle à distance en Java inspiré de SSH. Un client envoie des 
 - Gestion multi-thread (plusieurs clients simultanés)
 - Exécution de commandes système (Windows/Linux/macOS)
 - Interface graphique Swing (ServerGUI, ClientGUI)
-- Authentification par login/password (bonus)
-- Journalisation avancée dans serveur.log (bonus)
+- Authentification par login/password 
+- Journalisation avancée dans serveur.log 
 - Historique des commandes (flèches haut/bas)
 
 ## Compilation & Exécution
