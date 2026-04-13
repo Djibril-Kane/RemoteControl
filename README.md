@@ -37,7 +37,7 @@ main/
 ├── ClientApp.java              # Point d'entrée client
 ├── ClientGUI.java              # Interface graphique client (Swing)
 ├── ClientNetwork.java          # Gère la connexion TCP
-├── LoginGUI.java               # Authentification 
+├── LoginGUI.java               # Authentification (Swing)
 ├── .gitignore
 └── README.md
 ```
