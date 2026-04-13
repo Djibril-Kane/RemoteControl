@@ -30,12 +30,12 @@ java ClientApp
 ```
 main/
 ├── ServerApp.java              # Point d'entrée serveur
-├── ServerGUI.java              # Interface graphique serveur
+├── ServerGUI.java              # Interface graphique serveur (Swing)
 ├── ServerListener.java         # Accepte les connexions TCP
 ├── ClientHandler.java          # Gère chaque client (Thread)
 ├── CommandExecutor.java        # Exécute les commandes système
 ├── ClientApp.java              # Point d'entrée client
-├── ClientGUI.java              # Interface graphique client
+├── ClientGUI.java              # Interface graphique client (Swing)
 ├── ClientNetwork.java          # Gère la connexion TCP
 ├── LoginGUI.java               # Authentification 
 ├── .gitignore
