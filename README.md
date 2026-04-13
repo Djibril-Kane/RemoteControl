@@ -1,54 +1,49 @@
 # RemoteControl - Logiciel de Contrôle à Distance
 
-Logiciel de contrôle à distance en Java fonctionnant selon une architecture client-serveur (similaire à SSH).
-
-## Description
-
-- **Client** : envoie des commandes système au serveur
-- **Serveur** : reçoit les commandes, les exécute et retourne les résultats
+Logiciel de contrôle à distance en Java inspiré de SSH. Un client envoie des commandes à un serveur qui les exécute et retourne les résultats.
 
 ## Fonctionnalités
 
-- Communication TCP/IP (Sockets)
-- Gestion de plusieurs clients simultanés (Threads)
-- Exécution de commandes système (Windows, Linux, macOS)
-- Affichage des résultats et erreurs
+- Architecture client-serveur TCP
+- Gestion multi-thread (plusieurs clients simultanés)
+- Exécution de commandes système (Windows/Linux/macOS)
+- Interface graphique Swing (ServerGUI, ClientGUI)
+- Authentification par login/password (bonus)
+- Journalisation avancée dans serveur.log (bonus)
+- Historique des commandes (flèches haut/bas)
 
-## Compilation
+## Compilation & Exécution
 
 ```bash
+# Compilation
 javac *.java
-```
 
-## Exécution
+# Serveur (Terminal 1)
+java ServerApp
 
-**Démarrer le serveur :**
-```bash
-java Server
-```
-
-**Démarrer le client :**
-```bash
-java Client
+# Client (Terminal 2)
+java ClientApp
 ```
 
 ## Structure du Projet
 
 ```
-RemoteControl/
-├── Constants.java        # Constantes du projet
-├── CommandExecutor.java  # Exécution des commandes
-├── Server.java          # Serveur TCP
-├── ClientHandler.java   # Gestion des clients
-├── Client.java          # Client TCP
+main/
+├── ServerApp.java              # Point d'entrée serveur
+├── ServerGUI.java              # Interface graphique serveur
+├── ServerListener.java         # Accepte les connexions TCP
+├── ClientHandler.java          # Gère chaque client (Thread)
+├── CommandExecutor.java        # Exécute les commandes système
+├── ClientApp.java              # Point d'entrée client
+├── ClientGUI.java              # Interface graphique client
+├── ClientNetwork.java          # Gère la connexion TCP
+├── LoginGUI.java               # Authentification 
 ├── .gitignore
 └── README.md
 ```
 
-## Groupe
+## Configuration
 
-À remplir avec les noms des 3 étudiants
-
-## Date de Rendu
-
-12 avril 2026
+- Port serveur : 5000 (par défaut)
+- Journalisation : `serveur.log`
+- Protocole : TCP avec marqueur `--END--`
